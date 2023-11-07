@@ -12,6 +12,8 @@ and related or neighboring rights to the source code in this file.
 http://creativecommons.org/publicdomain/zero/1.0/
 */
 
+// Note: this file tests all the SnP interface functions.
+
     SnP_StaticInitialize();
 
     SnP_Initialize(stateAccumulated);
@@ -25,6 +27,7 @@ http://creativecommons.org/publicdomain/zero/1.0/
     DUMP(stateTest, "stateTest after testing SnP_Initialize()");
     DUMP(stateAccumulated, "stateAccumulated after testing SnP_Initialize()");
 
+    // QUESTION: here it says `Testing SnP_AddByte()`; But, where do we assert?
     /* Testing SnP_AddByte() */
     {
         unsigned offset;

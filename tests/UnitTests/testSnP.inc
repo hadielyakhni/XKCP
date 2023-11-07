@@ -120,11 +120,18 @@ void accumulateState(void *stateAccumulated, const void *stateTest)
 void nominalSnPtest(const char *fileName, const char *synopsis, const unsigned char *expected);
 void elementarySnPtest(void);
 
+// Note: the main test function, it's used by places like `testPermutations.c`
+//  to test multiple variations of the permutation.
 void testSnP(const char *fileName, const char *synopsis, const unsigned char *expected)
 {
+    // Note: this will print the synopsis and implementation name.
     UT_startTest(synopsis, JOIN(SnP, _implementation));
+
+    // Question: what's the difference between `elementarySnPtest` and `nominalSnPtest`?
     elementarySnPtest();
     nominalSnPtest(fileName, synopsis, expected);
+
+    // Note: this will print "OK".
     UT_endTest();
 }
 

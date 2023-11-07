@@ -50,6 +50,9 @@ public:
         a << f.getDescription();
         return a;
     }
+
+    // Note: @hadielyakhni added the virtual destructor for the `make` to work.
+    virtual ~RoundCountParameterizedPermutation() {}
 };
 
 #endif

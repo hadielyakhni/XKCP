@@ -32,6 +32,12 @@ http://creativecommons.org/publicdomain/zero/1.0/
 #define SnP_AddBytes                    JOIN(SnP, _AddBytes)
 #define SnP_ExtractBytes                JOIN(SnP, _ExtractBytes)
 
+// TODO: remove the below 2 dummy functions later,
+//  they were needed to bypass a build error.
+#define displayBytes(a, b, c, d)        do {} while (0)
+#define displayText(a, b)               do {} while (0)
+
+// Note: this is the function called by `SimpleFIPS202.c` to implement the different functions.
 int Sponge(unsigned int rate, unsigned int capacity, const unsigned char *input, size_t inputByteLen, unsigned char suffix, unsigned char *output, size_t outputByteLen)
 {
     ALIGN(SnP_stateAlignment) unsigned char state[SnP_stateSizeInBytes];

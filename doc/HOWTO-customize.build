@@ -21,7 +21,6 @@ We here explain how to create a custom build target in the XKCP. Some examples, 
 
 Note that this file is included from Makefile.build, so the examples and anything tried here are accessible "for real" from make.
 
-
 # Step 1: create a new target
 
 First, choose a target name and add the corresponding XML tag. For the moment, we leave the inherits attribute empty:
@@ -95,4 +94,10 @@ Please refer to the file lib/LowLevel.build for the list of supported implementa
     <!-- Type "make libK12-AVX512.dylib" to build a dynamic library for macOS with KangarooTwelve with AVX512 code. -->
     <target name="libK12-AVX512.dylib" inherits="KangarooTwelve K1600-AVX512 K1600x2-AVX512-u12 K1600x4-AVX512-u12 K1600x8-AVX512-u12"/>
 
+    <!-- My Experiments -->
+
+    <!-- Type "make FIPS202.a" -->
+    <target name="FIPS202.a" inherits="FIPS202 K1600-ref-64bits"/>
+
+    <target name="k12-reference.a" inherits="KangarooTwelve K1600-ref-64bits"/>
 </group>

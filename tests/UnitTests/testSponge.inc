@@ -15,6 +15,9 @@ http://creativecommons.org/publicdomain/zero/1.0/
 #define JOIN0(a, b)                     a ## b
 #define JOIN(a, b)                      JOIN0(a, b)
 
+// Question: where does this prefix come from?
+//  answer: form `testSponge.c`
+
 #define performTestSponge               JOIN(prefix, _performTestSponge)
 #define selfTestSponge                  JOIN(prefix, _selfTestSponge)
 #define writeTestSponge                 JOIN(prefix, _writeTestSponge)

@@ -12,6 +12,11 @@ and related or neighboring rights to the source code in this file.
 http://creativecommons.org/publicdomain/zero/1.0/
 */
 
+// Note: this file appears to be the main testing file for XKCP.
+//  To run it, `make generic64/UnitTests`, then `./bin/generic64/UnitTests`.
+//  The `process` function will determine what type of tests to run.
+//  Those tests are located in the `tests/UnitTests` directory.
+
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
